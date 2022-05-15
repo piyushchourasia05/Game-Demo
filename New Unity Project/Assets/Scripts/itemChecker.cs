@@ -15,10 +15,14 @@ public class itemChecker : MonoBehaviour {
 	public GameObject ScoreObject;
 
 	Text scoreText;
+	public GameObject a;
+	public GameObject b;
 
 	void Start() {
 		
 		scoreText = ScoreObject.GetComponent < Text >();
+		Time.timeScale = 1f;
+		n = 0;
 	}
 
 	
@@ -48,7 +52,9 @@ public class itemChecker : MonoBehaviour {
 		}
 		if(n == 3)
         {
-			SceneManager.LoadScene(3);
-        }
+			a.SetActive(true);
+			b.SetActive(true);
+			Time.timeScale = 0f;
+		}
 	}
 }

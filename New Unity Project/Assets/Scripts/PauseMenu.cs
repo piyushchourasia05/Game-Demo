@@ -44,4 +44,8 @@ public class PauseMenu : MonoBehaviour
         Debug.Log ("QG ");
         SceneManager.LoadScene(0);
     }
+    public void next()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
