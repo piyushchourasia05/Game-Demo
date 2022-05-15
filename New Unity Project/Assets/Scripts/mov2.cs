@@ -42,25 +42,18 @@ public class mov2 : MonoBehaviour
 		{
 			x = transform.position.y;
 			move = new Vector2(-x * speed, rb.velocity.y);
-
+			anim.Play("Walk");
 			rb.velocity = move;
 		}
 		if ( Input.GetKeyDown(KeyCode.LeftArrow))
 		{
-			transform.Rotate(0, 180, 0);
+			transform.Rotate(0, -180, 0);
 
 		}
 		if ( Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			transform.Rotate(0, 0, 0);
 		}
-		if (rb.velocity != Vector2.zero)
-		{
-			anim.SetBool("W", true);
-		}
-		else if (rb.velocity == Vector2.zero)
-		{
-			anim.SetBool("W", false);
-		}
+		
 	}
 }

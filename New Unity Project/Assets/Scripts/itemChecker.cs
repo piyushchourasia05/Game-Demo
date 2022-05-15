@@ -2,6 +2,7 @@
 using System.Collections;
 //we need this for work with UI
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class itemChecker : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class itemChecker : MonoBehaviour {
 	public AudioClip OkSound, BoomSound;
 
 	public int score;
+	private int n;
 	
 	public GameObject ScoreObject;
 
@@ -42,6 +44,11 @@ public class itemChecker : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(BoomSound, other.transform.position);
 			
 			Destroy (other.gameObject);
+			n = n + 1;
 		}
+		if(n == 3)
+        {
+			SceneManager.LoadScene(3);
+        }
 	}
 }

@@ -10,9 +10,17 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(1);
 
     }
+    public void PlaySecpndGame()
+    {
+        SceneManager.LoadScene(2);
+
+    }
     public void QuitGame()
     {
         Application.Quit();
     }
-
+    public void Next()
+    {
+        SceneManager.LoadScene(4);
+    }
 }

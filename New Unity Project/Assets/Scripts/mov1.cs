@@ -36,14 +36,14 @@ public class mov1 : MonoBehaviour
 		{
 			x = transform.position.y;
 			move = new Vector2(x * speed, rb.velocity.y);
-
+			anim.Play("Walk");
 			rb.velocity = move;
 		}
 		if (Input.GetKey("d"))
 		{
 			x = transform.position.y;
 			move = new Vector2(-x * speed, rb.velocity.y);
-
+			anim.Play("Walk");
 			rb.velocity = move;
 		}
 		if (Input.GetKeyDown("a") )
@@ -55,13 +55,6 @@ public class mov1 : MonoBehaviour
 		{
 			transform.Rotate(0, 0, 0);
 		}
-		if (rb.velocity != Vector2.zero)
-		{
-			anim.SetBool("Walk", true);
-		}
-		else if (rb.velocity == Vector2.zero)
-		{
-			anim.SetBool("Walk", false);
-		}
+		
 	}
 }

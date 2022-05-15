@@ -30,7 +30,7 @@ public class playerMove : MonoBehaviour {
 		x = Input.GetAxis ("Horizontal");
 		
 		move = new Vector2 (x * speed, rb.velocity.y);
-		
+		anim.Play("Walk");
 		rb.velocity = move;
 		if(Input.GetKeyDown("a")|| Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -41,13 +41,6 @@ public class playerMove : MonoBehaviour {
 		{
 			transform.Rotate(0, 0, 0);
 		}
-		if (rb.velocity != Vector2.zero)
-		{
-			anim.SetBool("Walk", true);
-		}
-        else if(rb.velocity == Vector2.zero)
-        {
-			anim.SetBool("Walk", false);
-		}
+	
 	}
 } 
