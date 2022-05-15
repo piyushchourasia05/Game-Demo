@@ -32,6 +32,15 @@ public class playerMove : MonoBehaviour {
 		move = new Vector2 (x * speed, rb.velocity.y);
 		
 		rb.velocity = move;
+		if(Input.GetKeyDown("a")|| Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+			transform.Rotate(0, 180, 0);
+			
+        }
+		if (Input.GetKeyDown("d") || Input.GetKeyDown(KeyCode.RightArrow))
+		{
+			transform.Rotate(0, 0, 0);
+		}
 		if (rb.velocity != Vector2.zero)
 		{
 			anim.SetBool("Walk", true);

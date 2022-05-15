@@ -56,10 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\playerMove.cs" />
-    <Compile Include="Assets\Scripts\timeDestroyer.cs" />
     <Compile Include="Assets\Scripts\itemChecker.cs" />
     <Compile Include="Assets\Scripts\ItemSpawn.cs" />
+    <Compile Include="Assets\Scripts\playerMove.cs" />
+    <Compile Include="Assets\Scripts\timeDestroyer.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\mov1.cs" />
+    <Compile Include="Assets\Scripts\destroy.cs" />
+    <Compile Include="Assets\Scripts\mov2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
